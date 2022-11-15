@@ -100,5 +100,15 @@ dist
 # DynamoDB Local files
 .dynamodb/
 
+### DotnetCore ###
+# .NET Core build folders
+bin/
+obj/
+
+# Common node modules locations
+/node_modules
+/wwwroot/node_modules
+
+
 # TernJS port file
 .tern-port
