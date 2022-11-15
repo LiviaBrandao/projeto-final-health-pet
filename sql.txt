@@ -1,0 +1,24 @@
+Tabela Cliente
+Cod
+Nome
+CPF
+
+Tabela Pet
+CodPet
+Nome 
+Nascimento
+Raça
+TipoPet
+
+Tabela Cuidadores
+CodPet
+Nome
+CPF
+Especialidade
+
+Tabela Agendamento
+DataAgendamento
+NomePet
+raça
+NomeCuidador
+CodCliente
