@@ -23,5 +23,7 @@ namespace HealthPets_API.Data
         public DbSet<Cuidador> Cuidador { get; set; }
         public DbSet<Servico> Servico { get; set; }
         public DbSet<Agendamento> Agendamento { get; set; }
+
+        public DbSet<User>? Usuario { get; set; }
     }
 }
