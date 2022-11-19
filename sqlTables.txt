@@ -1,0 +1,43 @@
+CREATE TABLE ClientePet(
+	[codCliente] INT IDENTITY (1, 1) NOT NULL,
+    [nomeCliente]	 VARCHAR (60) NULL,
+    [cpfCliente]     VARCHAR (30) NULL,
+    PRIMARY KEY CLUSTERED ([codCliente] ASC),
+);
+
+Insert into ClientePet (nomeCliente, cpfCliente) values ('Maria José', '2349987-32')
+Insert into ClientePet (nomeCliente, cpfCliente) values ('João Almeida', '2349987-31')
+
+CREATE TABLE Pet(
+	[codPet]  INT IDENTITY (1, 1) NOT NULL,
+    [nomePet] VARCHAR (60)          NULL,
+    [raca]    VARCHAR (60) NULL,
+    [tipoPet] VARCHAR (30) NULL,
+    [codCliente]  INTNULL,
+    PRIMARY KEY CLUSTERED ([codPet] ASC),
+    FOREIGN KEY (codCliente) REFERENCES ClientePet(codCliente)
+);
+
+Insert into Pet (nomePet, raca, tipoPet, codCliente) values ('Lulu', 'Lulu da Pomerania', 'Cachorro', 1);
+Insert into Pet (nomePet, raca, tipoPet, codCliente) values ('Filó', 'Lulu da Pomerania', 'Cachorro', 1);
+Insert into Pet (nomePet, raca, tipoPet, codCliente) values ('Teste', 'Lulu da Pomerania', 'Cachorro', 1);
+
+CREATE TABLE Cuidador(
+	[codCuidador]  INT IDENTITY (1, 1) NOT NULL,
+    [nomeCuidador]   VARCHAR (60) NULL,
+    [especialidade]  VARCHAR (30) NULL,
+    PRIMARY KEY CLUSTERED ([codCuidador] ASC)
+);
+
+Insert into Cuidador (nomeCuidador,especialidade) values ('Helen', 'Banho e Tosa');
+Insert into Cuidador (nomeCuidador,especialidade) values ('Agnes', 'Banho e Tosa');
+Insert into Cuidador (nomeCuidador,especialidade) values ('Audrey', 'Tosa Personalizada');
+
+CREATE TABLE Servico(
+ 	[idServico] INT IDENTITY (1, 1) NOT NULL,
+    [nomeServico] VARCHAR(60),
+    PRIMARY KEY CLUSTERED ([idServico] ASC)
+);
+
+insert into Servico(nomeServico) values ('Adestramento')
+insert into Servico(nomeServico) values ('Atendimento Veterinário')
