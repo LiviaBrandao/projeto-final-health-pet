@@ -7,9 +7,9 @@ namespace HealthPets_API.Models
         [Key]
         public int idAgendamento { get; set; }
         public string? dataAgendamento { get; set; }
-        public string? codPet { get; set; } 
-        public string? codCuidador { get; set; }
-        public string? codCliente { get; set; }
+        public string? nomePet { get; set; } 
+        public string? nomeCuidador { get; set; }
+        public string? nomeCliente { get; set; }
         
     }
 }
