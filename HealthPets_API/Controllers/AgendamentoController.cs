@@ -79,9 +79,9 @@ namespace HealthPets_API.Controllers
                 }
 
                 result.dataAgendamento = dadosAgendamentoAlt.dataAgendamento;
-                result.codPet = dadosAgendamentoAlt.codPet;
-                result.codCuidador = dadosAgendamentoAlt.codCuidador;
-                result.codCliente = dadosAgendamentoAlt.codCliente;
+                result.nomePet = dadosAgendamentoAlt.nomePet;
+                result.nomeCuidador = dadosAgendamentoAlt.nomeCuidador;
+                result.nomeCliente = dadosAgendamentoAlt.nomeCliente;
 
                 await _context.SaveChangesAsync();
                 return Created($"/api/Agendamento/{dadosAgendamentoAlt.idAgendamento}", dadosAgendamentoAlt);
